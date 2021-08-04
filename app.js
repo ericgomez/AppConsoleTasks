@@ -7,7 +7,6 @@ const Tasks = require('./models/tasks')
 console.clear();
 
 const main = async () => {
-  console.log('Hola Mundo.');
 
   let opt = '';
   const tasks = new Tasks();
@@ -22,7 +21,7 @@ const main = async () => {
         tasks.createTask( description );
         break;
       case '2':
-        console.log( tasks._listing );
+        console.log( tasks.listingTasks );
         break;
     }
 

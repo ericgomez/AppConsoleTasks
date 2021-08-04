@@ -9,31 +9,31 @@ const questions = [
     choices: [
       {
         value: '1', // Valor que representa
-        name: '1. Create homework' // Datos a mostrar
+        name: `${'1.'.green} Create homework` // Datos a mostrar
       },
       {
         value: '2', // Valor que representa
-        name: '2. List homework' // Datos a mostrar
+        name: `${'2.'.green} List homework` // Datos a mostrar
       },
       {
         value: '3', // Valor que representa
-        name: '3. List homework completed' // Datos a mostrar
+        name: `${'3.'.green} List homework completed` // Datos a mostrar
       },
       {
         value: '4', // Valor que representa
-        name: '4. List homework pendent' // Datos a mostrar
+        name: `${'4.'.green} List homework pendent` // Datos a mostrar
       },
       {
         value: '5', // Valor que representa
-        name: '5. Complete homework(s)' // Datos a mostrar
+        name: `${'5.'.green} Complete homework(s)` // Datos a mostrar
       },
       {
         value: '6', // Valor que representa
-        name: '6. Delete homework' // Datos a mostrar
+        name: `${'6.'.green} Delete homework` // Datos a mostrar
       },
       {
         value: '0', // Valor que representa
-        name: '0. Exit' // Datos a mostrar
+        name: `${'0.'.green} Exit` // Datos a mostrar
       },
     ]
   }
