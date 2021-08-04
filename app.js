@@ -4,12 +4,20 @@ const { showMenu, pause } = require('./helpers/messages')
 
 console.clear();
 
-const main = () => {
+const main = async () => {
   console.log('Hola Mundo.');
 
-  showMenu();
+  let opt = '';
 
-  pause();
+  do {
+
+    opt = await showMenu();
+    console.log({opt})
+
+    if (opt !== '0' ) await pause();
+
+  } while (opt !== '0');
+
 }
 
 main();
