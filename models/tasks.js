@@ -85,6 +85,23 @@ class Tasks {
     }
   }
 
+  toggleCompleted( ids = []) {
+
+    ids.forEach(id => {
+      const task = this._listing[id];
+      if ( !task.completedIn ) {
+        task.completedIn = new Date().toISOString();
+      }
+    })
+
+    this.listingTasks.forEach ( task => {
+      if ( !ids.includes(task.id) ) {
+        this._listing[task.id].completedIn = null;
+      }
+    })
+
+  }
+
 } 
 
 module.exports = Tasks;
