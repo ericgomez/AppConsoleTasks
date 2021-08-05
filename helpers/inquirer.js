@@ -96,6 +96,11 @@ const deleteTaskList = async ( tasks = [] ) => {
     }
   });
 
+  choices.unshift({
+    value: '0', // Valor que representa
+    name: `${'0.'.green} Cancel` // Datos a mostrar
+  })
+
   const questions = [
     {
       type: 'list',
@@ -111,9 +116,24 @@ const deleteTaskList = async ( tasks = [] ) => {
  
 }
 
+const confirm = async ( message = '' ) => {
+  const question = [
+    {
+      type: 'confirm',
+      name: 'ok',
+      message
+    }
+  ];
+
+  console.log('\n')
+  const { ok } = await inquirer.prompt(question);
+  return ok;
+}
+
 module.exports = {
   inquirerMenu,
   pause,
   readInput,
-  deleteTaskList
+  deleteTaskList,
+  confirm
 }
