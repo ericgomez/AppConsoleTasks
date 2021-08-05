@@ -30,6 +30,12 @@ const main = async () => {
       case '2':
         tasks.listingComplete() ;
         break;
+      case '3':
+        tasks.listingPendingCompleted(true) ;
+        break;
+      case '4':
+        tasks.listingPendingCompleted(false) ;
+        break;
     }
 
     saveDB( tasks.listingTasks );
