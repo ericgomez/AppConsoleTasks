@@ -48,7 +48,6 @@ class Tasks {
     })
   }
 
-
   listingPendingCompleted( completed = true ) {
 
     console.log();
@@ -75,12 +74,15 @@ class Tasks {
           console.log(`${ (idx + '.').green } ${ description } :: ${ state }`);
         }
       }
-
-      
-
       
     })
 
+  }
+
+  deleteTask ( id = '' ) {
+    if ( this._listing[id] ) {
+      delete this._listing[id];
+    }
   }
 
 } 
