@@ -28,7 +28,7 @@ const main = async () => {
         tasks.createTask( description );
         break;
       case '2':
-        console.log( tasks.listingTasks );
+        tasks.listingComplete() ;
         break;
     }
 
