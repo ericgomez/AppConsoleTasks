@@ -8,14 +8,14 @@ const saveDB = ( data ) => {
 
 
 const readDB = () => {
-  if (fs.existsSync(file)) {
+  if ( !fs.existsSync(file)) {
     return null;
   }
   
   const info = fs.readFileSync(file, { encoding: 'utf8' });
   const data = JSON.parse( info );
 
-  console.log( data );
+  // console.log( data );
   
   return data;
 }

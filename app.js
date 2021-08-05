@@ -15,10 +15,8 @@ const main = async () => {
   const tasksDB = readDB();
 
   if ( tasksDB ) {
-    
+    tasks.loadTasksFromArray( tasksDB ); 
   }
-
-  // if (opt !== '0') await pause();
 
   do {
 
