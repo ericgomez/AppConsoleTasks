@@ -1,6 +1,6 @@
 require('colors');
 
-const { saveDB } = require('./helpers/SaveFile');
+const { saveDB, readDB } = require('./helpers/SaveFile');
 const { inquirerMenu, pause, readInput } = require('./helpers/inquirer')
 const Task = require('./models/task')
 const Tasks = require('./models/tasks')
@@ -11,6 +11,14 @@ const main = async () => {
 
   let opt = '';
   const tasks = new Tasks();
+
+  const tasksDB = readDB();
+
+  if ( tasksDB ) {
+    
+  }
+
+  // if (opt !== '0') await pause();
 
   do {
 
