@@ -1,7 +1,14 @@
 require('colors');
 
 const { saveDB, readDB } = require('./helpers/SaveFile');
-const { inquirerMenu, pause, readInput, deleteTaskList, confirm } = require('./helpers/inquirer')
+const { 
+  inquirerMenu, 
+  pause, 
+  readInput, 
+  deleteTaskList, 
+  confirm, 
+  showListingChecklist, 
+} = require('./helpers/inquirer')
 const Task = require('./models/task')
 const Tasks = require('./models/tasks')
 
@@ -36,6 +43,10 @@ const main = async () => {
       case '4':
         tasks.listingPendingCompleted(false) ;
         break;
+      case '5':
+        const ids = await showListingChecklist( tasks.listingTasks );
+          console.log(ids);
+        break
       case '6':
         const id = await deleteTaskList( tasks.listingTasks );
         if ( id !== '0' ) {    
